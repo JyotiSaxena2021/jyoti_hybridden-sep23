@@ -153,7 +153,11 @@ public abstract class ControlActions {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
 		try {
+
 			FileUtils.copyFile(srcFile, new File(".//screenshots/"+fileName+".png"));
+
+			FileUtils.copyFile(srcFile, new File(".//jyoti_hydd_sep23/screenshots"+fileName+".png"));
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

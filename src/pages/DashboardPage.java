@@ -1,6 +1,8 @@
 package pages;
 
+
 import java.util.List;
+
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import base.ControlActions;
 
 public class DashboardPage extends ControlActions{
+
 
 	@FindBy(xpath = "//section[@id='sidebar']//h6[text()='Categories']//following-sibling::div[not(@id)]/label")
 	List<WebElement> categoriesElementList ;
@@ -105,5 +108,12 @@ public class DashboardPage extends ControlActions{
 	public CartPage clickOnCartMenu() {
 		clickOnElement(cartMenu, false);
 		return cartPage;
+
+	@FindBy(css = "")
+	WebElement searchElement;
+	
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);
+
 	}
 }
